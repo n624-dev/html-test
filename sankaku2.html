@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+  角度: <input type="text" id="angle">
+</form>
+
+<p>sin(<span id="angle_display"></span>) = <span id="demo"></span></p>
+
+<script>
+document.getElementById("angle").addEventListener("input", function() {
+  var angle = document.getElementById("angle").value;
+  document.getElementById("angle_display").innerHTML = angle;
+  document.getElementById("demo").innerHTML = Math.sin(angle * Math.PI / 180);
+});
+</script>
+
+</body>
+</html>
